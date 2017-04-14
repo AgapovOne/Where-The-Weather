@@ -43,8 +43,14 @@ class WeatherViewController: UIViewController {
         viewModel.retrieveData()
     }
 
+
+    // MARK: - UI Actions
+    @IBAction func tapReload(_ sender: UIButton) {
+        viewModel.retrieveData(shouldLoad: true)
+    }
+
     // MARK: - Private methods
-    func fillPageViewController(weathers: [Weather]) {
+    private func fillPageViewController(weathers: [Weather]) {
         var controllers: [UIViewController] = []
         weathers.forEach { _ in
             let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: PlaceContentViewController.self)) as! PlaceContentViewController

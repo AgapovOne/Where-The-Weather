@@ -28,11 +28,23 @@
                                     <segue destination="BoR-2a-Hk0" kind="embed" id="jrv-cI-T1G"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3d5-CU-gQL">
+                                <rect key="frame" x="137.5" y="601" width="100" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <state key="normal" title="Force reload">
+                                    <color key="titleColor" red="0.79226005077362061" green="0.7181098461151123" blue="0.48854580521583557" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapReload:" destination="Xso-su-Tn8" eventType="touchUpInside" id="uAq-7I-jZb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="3d5-CU-gQL" firstAttribute="centerX" secondItem="MI9-4N-e3i" secondAttribute="centerX" id="6kA-IJ-mNV"/>
                             <constraint firstItem="JiJ-SZ-W7X" firstAttribute="top" secondItem="MI9-4N-e3i" secondAttribute="topMargin" id="Bbn-z0-VYG"/>
                             <constraint firstAttribute="trailing" secondItem="JiJ-SZ-W7X" secondAttribute="trailing" id="BnM-zT-rEB"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="3d5-CU-gQL" secondAttribute="bottom" constant="32" id="Hhb-dI-JW3"/>
                             <constraint firstItem="JiJ-SZ-W7X" firstAttribute="leading" secondItem="MI9-4N-e3i" secondAttribute="leading" id="ZCB-jX-uUg"/>
                             <constraint firstAttribute="bottomMargin" secondItem="JiJ-SZ-W7X" secondAttribute="bottom" id="bfb-fY-4Dq"/>
                         </constraints>
@@ -55,7 +67,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xMC-NY-noc">
-                                <rect key="frame" x="152.5" y="284" width="70.5" height="99.5"/>
+                                <rect key="frame" x="152.5" y="270.5" width="70.5" height="127"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cR-rf-KnP">
                                         <rect key="frame" x="0.0" y="0.0" width="70.5" height="72"/>
@@ -63,8 +75,14 @@
                                         <color key="textColor" red="0.79226005079999995" green="0.71810984609999995" blue="0.48854580520000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFW-kj-CYB">
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFW-kj-CYB">
                                         <rect key="frame" x="0.0" y="80" width="70.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <color key="textColor" red="0.79226005079999995" green="0.71810984609999995" blue="0.48854580520000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="5 May" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MX8-mT-O6r">
+                                        <rect key="frame" x="0.0" y="107.5" width="70.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                         <color key="textColor" red="0.79226005079999995" green="0.71810984609999995" blue="0.48854580520000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -79,6 +97,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="MX8-mT-O6r" id="e1p-9a-1oB"/>
                         <outlet property="degreesLabel" destination="0cR-rf-KnP" id="Rvk-ed-2fc"/>
                         <outlet property="weatherDescriptionLabel" destination="yFW-kj-CYB" id="im8-lz-6WC"/>
                     </connections>

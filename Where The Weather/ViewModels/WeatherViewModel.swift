@@ -20,8 +20,23 @@ class WeatherViewModel {
 
     // MARK: - Public methods
     func retrieveData(shouldLoad: Bool = false) {
-        // TODO: Retrieve from Realm, load if needed
         startLoading()
+        if shouldLoad {
+            loadData()
+        } else {
+            do {
+                let realm = try Realm()
+                weathers = Array(realm.objects(Weather.self))
+                finishLoading(nil)
+            } catch {
+                finishLoading(error)
+            }
+        }
+    }
+
+    // MARK: - Private methods
+    private func loadData(completion: (() -> Void)? = nil) {
+        // TODO: Retrieve from Realm, load if needed
         Alamofire.request(Router.weathers(forCities: [.london, .manchester, .liverpool]))
             .validate()
             .responseArray(keyPath: "list", completionHandler: { [weak self] (response: DataResponse<[Weather]>) in
@@ -41,11 +56,6 @@ class WeatherViewModel {
                     self?.finishLoading(nil)
                 }
             })
-    }
-
-    // MARK: - Private methods
-    private func loadData(completion: (() -> Void)? = nil) {
-
     }
 
     private func saveToRealm(_ objects:[Weather]) throws {
