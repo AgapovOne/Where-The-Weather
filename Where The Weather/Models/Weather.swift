@@ -15,6 +15,7 @@ class Weather: Object, Mappable {
     dynamic var name: String = ""
     dynamic var weatherDescription: String = ""
     dynamic var windSpeed: Double = 0.0
+    dynamic var date: Date = Date()
 
     override static func primaryKey() -> String? {
         return "id"
@@ -25,10 +26,11 @@ class Weather: Object, Mappable {
     }
 
     func mapping(map: Map) {
-        temperature    <- map["main.temp"]
+        temperature <- map["main.temp"]
         name <- map["name"]
         weatherDescription <- map["weather.0.description"]
         windSpeed <- map["wind.speed"]
+        date <- (map["dt"], DateTransform())
     }
 }
 /*SUCCESS: {

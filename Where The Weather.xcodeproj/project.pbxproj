@@ -18,6 +18,7 @@
 		8D549A811EA14F4900564D65 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D549A801EA14F4900564D65 /* UserDefaults.swift */; };
 		8D549A841EA15A0500564D65 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D549A831EA15A0500564D65 /* WeatherViewModel.swift */; };
 		8D549A861EA1687800564D65 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D549A851EA1687800564D65 /* UIKit+Extensions.swift */; };
+		8D549A8C1EA1707900564D65 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D549A8B1EA1707900564D65 /* DateFormatters.swift */; };
 		8DD297BA1E9FFC6200F54A45 /* PlacePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD297B91E9FFC6200F54A45 /* PlacePageViewController.swift */; };
 		8DD297BC1E9FFF7B00F54A45 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD297BB1E9FFF7B00F54A45 /* WeatherViewController.swift */; };
 		8DD297BE1EA0046000F54A45 /* PlaceContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD297BD1EA0046000F54A45 /* PlaceContentViewController.swift */; };
@@ -66,6 +67,7 @@
 		8D549A801EA14F4900564D65 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		8D549A831EA15A0500564D65 /* WeatherViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		8D549A851EA1687800564D65 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
+		8D549A8B1EA1707900564D65 /* DateFormatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		8DD297B91E9FFC6200F54A45 /* PlacePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePageViewController.swift; sourceTree = "<group>"; };
 		8DD297BB1E9FFF7B00F54A45 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		8DD297BD1EA0046000F54A45 /* PlaceContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceContentViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		8D15B8611E9FF85A00FE5DD6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				8D549A8A1EA1706700564D65 /* Formatters */,
 				8DD297C11EA007E700F54A45 /* Constants.swift */,
 				8D549A801EA14F4900564D65 /* UserDefaults.swift */,
 				8D549A851EA1687800564D65 /* UIKit+Extensions.swift */,
@@ -206,6 +209,14 @@
 				8D549A831EA15A0500564D65 /* WeatherViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8D549A8A1EA1706700564D65 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				8D549A8B1EA1707900564D65 /* DateFormatters.swift */,
+			);
+			name = Formatters;
 			sourceTree = "<group>";
 		};
 		8DD297B81E9FFBF300F54A45 /* API */ = {
@@ -513,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D549A8C1EA1707900564D65 /* DateFormatters.swift in Sources */,
 				8DD297BE1EA0046000F54A45 /* PlaceContentViewController.swift in Sources */,
 				8D549A841EA15A0500564D65 /* WeatherViewModel.swift in Sources */,
 				8DD297BA1E9FFC6200F54A45 /* PlacePageViewController.swift in Sources */,
