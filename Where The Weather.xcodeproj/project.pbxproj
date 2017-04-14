@@ -145,7 +145,7 @@
 				8DD297B81E9FFBF300F54A45 /* API */,
 				8D15B8611E9FF85A00FE5DD6 /* Helpers */,
 				8D15B8601E9FF85400FE5DD6 /* Models */,
-				8D15B85F1E9FF84E00FE5DD6 /* Controllers */,
+				8D15B85F1E9FF84E00FE5DD6 /* ViewControllers */,
 				8D549A821EA159E600564D65 /* ViewModels */,
 				8D15B8311E9FF47500FE5DD6 /* AppDelegate.swift */,
 				8D15B8381E9FF47500FE5DD6 /* Assets.xcassets */,
@@ -174,14 +174,14 @@
 			path = "Where The WeatherUITests";
 			sourceTree = "<group>";
 		};
-		8D15B85F1E9FF84E00FE5DD6 /* Controllers */ = {
+		8D15B85F1E9FF84E00FE5DD6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				8DD297BB1E9FFF7B00F54A45 /* WeatherViewController.swift */,
 				8DD297B91E9FFC6200F54A45 /* PlacePageViewController.swift */,
 				8DD297BD1EA0046000F54A45 /* PlaceContentViewController.swift */,
 			);
-			path = Controllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		8D15B8601E9FF85400FE5DD6 /* Models */ = {

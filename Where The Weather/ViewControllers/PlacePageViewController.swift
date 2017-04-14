@@ -11,15 +11,25 @@ import ChameleonFramework
 
 class PlacePageViewController: UIPageViewController {
 
-    var weathers: [Weather] = []
-    var pages: [UIViewController] = [] {
+    var weathers: [Weather] = [] {
+        didSet {
+            let controllers: [PlaceContentViewController] = weathers.map {
+                let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: PlaceContentViewController.self)) as! PlaceContentViewController
+                controller.weather = $0
+                return controller
+            }
+            pages = controllers
+        }
+    }
+
+    fileprivate var pages: [UIViewController] = [] {
         didSet {
             guard let page = pages.first else { return }
             (page as! PlaceContentViewController).weather = weathers.first
             setViewControllers([page], direction: .forward, animated: true, completion: nil)
         }
     }
-    var currentPage = 0
+    fileprivate var currentPage = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()

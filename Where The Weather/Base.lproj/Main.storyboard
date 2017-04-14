@@ -38,6 +38,16 @@
                                     <action selector="tapReload:" destination="Xso-su-Tn8" eventType="touchUpInside" id="uAq-7I-jZb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQE-qG-yit">
+                                <rect key="frame" x="109" y="559" width="156" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                <state key="normal" title="Retrieve from realm">
+                                    <color key="titleColor" red="0.79226005079999995" green="0.71810984609999995" blue="0.48854580520000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapRetrieve:" destination="Xso-su-Tn8" eventType="touchUpInside" id="Yop-i8-jt4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -45,6 +55,8 @@
                             <constraint firstItem="JiJ-SZ-W7X" firstAttribute="top" secondItem="MI9-4N-e3i" secondAttribute="topMargin" id="Bbn-z0-VYG"/>
                             <constraint firstAttribute="trailing" secondItem="JiJ-SZ-W7X" secondAttribute="trailing" id="BnM-zT-rEB"/>
                             <constraint firstAttribute="bottomMargin" secondItem="3d5-CU-gQL" secondAttribute="bottom" constant="32" id="Hhb-dI-JW3"/>
+                            <constraint firstItem="MQE-qG-yit" firstAttribute="centerX" secondItem="MI9-4N-e3i" secondAttribute="centerX" id="IqF-q8-Sp9"/>
+                            <constraint firstItem="3d5-CU-gQL" firstAttribute="top" secondItem="MQE-qG-yit" secondAttribute="bottom" constant="8" id="Osa-8k-9uX"/>
                             <constraint firstItem="JiJ-SZ-W7X" firstAttribute="leading" secondItem="MI9-4N-e3i" secondAttribute="leading" id="ZCB-jX-uUg"/>
                             <constraint firstAttribute="bottomMargin" secondItem="JiJ-SZ-W7X" secondAttribute="bottom" id="bfb-fY-4Dq"/>
                         </constraints>

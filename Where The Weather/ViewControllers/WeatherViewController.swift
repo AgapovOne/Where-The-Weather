@@ -45,6 +45,10 @@ class WeatherViewController: UIViewController {
 
 
     // MARK: - UI Actions
+    @IBAction func tapRetrieve(_ sender: UIButton) {
+        viewModel.retrieveData()
+    }
+
     @IBAction func tapReload(_ sender: UIButton) {
         viewModel.retrieveData(shouldLoad: true)
     }
@@ -58,6 +62,5 @@ class WeatherViewController: UIViewController {
         }
 
         pageViewController.weathers = weathers
-        pageViewController.pages = controllers
     }
 }
