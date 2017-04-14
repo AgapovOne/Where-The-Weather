@@ -17,7 +17,7 @@ class PlaceContentViewController: UIViewController {
     var place: PlaceWeather? {
         didSet {
             guard let place = place else { return }
-            degreesLabel?.text = "\(place.degrees)"
+            degreesLabel?.text = "\(place.temperature)"
             weatherDescriptionLabel?.text = place.description
             actInd?.stopAnimating()
         }

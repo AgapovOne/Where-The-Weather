@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum City {
+enum City: String {
     case
     london,
     cardiff,

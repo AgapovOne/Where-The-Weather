@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireObjectMapper
 
 class WeatherViewController: UIViewController {
 
@@ -20,10 +21,16 @@ class WeatherViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) { [weak self] in
-            Alamofire.request(Router.weather(forCity: City.london))
+            Alamofire.request(Router.weather(forCity: UserDefaults.searchedCity))
                 .validate()
-                .responseJSON(completionHandler: { (json) in
-                    print(json)
+                .responseObject(completionHandler: { (response: DataResponse<PlaceWeather>) in
+                    switch response.result {
+                    case .failure(let error):
+                        print(error)
+                    case .success(let object):
+                        print("JSON: \(object)")
+                    }
+                    print("Value: \(response.value)")
                     self?.loadData()
             })
         }
@@ -39,7 +46,7 @@ class WeatherViewController: UIViewController {
 
         pageViewController.pages = controllers
         for (index, page) in pageViewController.pages.enumerated() {
-            (page as? PlaceContentViewController)?.place = PlaceWeather(type: .cloudy, degrees: index * 50)
+//            (page as? PlaceContentViewController)?.place = PlaceWeather(type: .cloudy, degrees: index * 50)
         }
         pageControl.numberOfPages = controllers.count
     }

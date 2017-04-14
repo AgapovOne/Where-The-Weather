@@ -6,36 +6,65 @@
 //  Copyright © 2017 Alex Agapov. All rights reserved.
 //
 
-import Foundation
-import Gloss
+import RealmSwift
+import ObjectMapper
 
-struct PlaceWeather {
-    enum WeatherType {
-        case
-        cloudy,
-        sunny,
-        rain
+class PlaceWeather: Object, Mappable {
+    dynamic var temperature: Double = 0.0
+    dynamic var name: String = ""
+    dynamic var weatherDescription: String = ""
+    dynamic var windSpeed: Double = 0.0
+
+    required convenience init?(map: Map) {
+        self.init()
     }
 
-    let type: WeatherType
-    let degrees: Int
-
-    var description: String {
-        switch type {
-        case .cloudy:
-            return "Cloudy here!"
-        case .rain:
-            return "Rainy-rainy-rain"
-        case .sunny:
-            return "Ohh, it's hot here. SUN!"
-        }
+    func mapping(map: Map) {
+        temperature    <- map["main.temp"]
+        name <- map["name"]
+        weatherDescription <- map["weather.0.description"]
+        windSpeed <- map["wind.speed"]
     }
 }
-
-extension PlaceWeather: Decodable {
-    init?(json: JSON) {
-        self.degrees = ("weather.temp" <~~ json)!
-        self.type = .sunny
-    }
-
-}
+/*SUCCESS: {
+ base = stations;
+ clouds =     {
+ all = 92;
+ };
+ cod = 200;
+ coord =     {
+ lat = "51.51";
+ lon = "-0.13";
+ };
+ dt = 1492192200;
+ id = 2643743;
+ main =     {
+ humidity = 87;
+ pressure = 1012;
+ temp = "12.91";
+ "temp_max" = 14;
+ "temp_min" = 12;
+ };
+ name = London;
+ sys =     {
+ country = GB;
+ id = 5187;
+ message = "0.0069";
+ sunrise = 1492146307;
+ sunset = 1492196225;
+ type = 1;
+ };
+ visibility = 10000;
+ weather =     (
+ {
+ description = "overcast clouds";
+ icon = 04d;
+ id = 804;
+ main = Clouds;
+ }
+ );
+ wind =     {
+ deg = 220;
+ speed = "4.1";
+ };
+ }*/
