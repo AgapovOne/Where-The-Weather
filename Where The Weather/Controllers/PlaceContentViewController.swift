@@ -12,14 +12,12 @@ class PlaceContentViewController: UIViewController {
 
     @IBOutlet private var degreesLabel: UILabel!
     @IBOutlet private var weatherDescriptionLabel: UILabel!
-    @IBOutlet private var actInd: UIActivityIndicatorView!
 
-    var place: PlaceWeather? {
+    var weather: Weather? {
         didSet {
-            guard let place = place else { return }
-            degreesLabel?.text = "\(place.temperature)"
-            weatherDescriptionLabel?.text = place.description
-            actInd?.stopAnimating()
+            guard let weather = weather else { return }
+            degreesLabel?.text = "\(weather.temperature)"
+            weatherDescriptionLabel?.text = weather.description
         }
     }
 }

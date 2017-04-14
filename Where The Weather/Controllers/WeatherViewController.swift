@@ -7,46 +7,51 @@
 //
 
 import UIKit
-import Alamofire
-import AlamofireObjectMapper
 
 class WeatherViewController: UIViewController {
 
-    @IBOutlet private var pageControl: UIPageControl!
-
+    // MARK: - UI outlets
     var pageViewController: PlacePageViewController {
         return childViewControllers.first as! PlacePageViewController
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) { [weak self] in
-            Alamofire.request(Router.weathers(forCities: [.london, .cardiff, .manchester]))
-                .validate()
-                .responseArray(keyPath: "list", completionHandler: { (response: DataResponse<[PlaceWeather]>) in
-                    switch response.result {
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                    case .success(let object):
-                        print("JSON: \(object)")
-                    }
-                    self?.loadData()
-            })
+    // MARK: - Properties
+    var viewModel: WeatherViewModel! {
+        didSet {
+            viewModel.startLoading = {
+                // TODO: Activity indicator, or whatever
+            }
+            viewModel.finishLoading = { [weak self] error in
+                guard
+                    let weathers = self?.viewModel.weathers,
+                    error == nil
+                else {
+                    // TODO: Error alert or whatever.
+                    // Can be empty or error.
+                    UIAlertController.showSimpleAlert(title: "Error", message: error?.localizedDescription, from: self)
+                    return
+                }
+                self?.fillPageViewController(weathers: weathers)
+            }
         }
     }
 
-    func loadData() {
-        // Load data
+    // MARK: - View lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        viewModel.retrieveData()
+    }
+
+    // MARK: - Private methods
+    func fillPageViewController(weathers: [Weather]) {
         var controllers: [UIViewController] = []
-        for _ in 0..<3 {
+        weathers.forEach { _ in
             let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: PlaceContentViewController.self)) as! PlaceContentViewController
             controllers.append(controller)
         }
 
+        pageViewController.weathers = weathers
         pageViewController.pages = controllers
-        for (index, page) in pageViewController.pages.enumerated() {
-//            (page as? PlaceContentViewController)?.place = PlaceWeather(type: .cloudy, degrees: index * 50)
-        }
-        pageControl.numberOfPages = controllers.count
     }
 }
