@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double GlossVersionNumber;
-FOUNDATION_EXPORT const unsigned char GlossVersionString[];
+FOUNDATION_EXPORT double AlamofireObjectMapperVersionNumber;
+FOUNDATION_EXPORT const unsigned char AlamofireObjectMapperVersionString[];
 

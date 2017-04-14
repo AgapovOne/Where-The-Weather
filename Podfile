@@ -5,9 +5,8 @@ target 'Where The Weather' do
 	# Core
 	pod 'Alamofire'
 	pod 'RealmSwift'
-
-    # Data
-    pod 'Gloss'
+  	pod 'AlamofireObjectMapper'
+  	pod 'ObjectMapper'
 
     # UI
     pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
