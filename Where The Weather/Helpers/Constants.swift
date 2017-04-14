@@ -28,4 +28,18 @@ enum City: String {
         }
     }
 
+    // Sadly, but API has only several cities by ID :(
+    var id: Int {
+        switch self {
+        case .london:
+            return 5056033
+        case .cardiff:
+            return 2172349
+        case .liverpool:
+            return 7839747
+        case .manchester:
+            return 3489586
+        }
+    }
+
 }

@@ -21,16 +21,15 @@ class WeatherViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) { [weak self] in
-            Alamofire.request(Router.weather(forCity: UserDefaults.searchedCity))
+            Alamofire.request(Router.weathers(forCities: [.london, .cardiff, .manchester]))
                 .validate()
-                .responseObject(completionHandler: { (response: DataResponse<PlaceWeather>) in
+                .responseArray(keyPath: "list", completionHandler: { (response: DataResponse<[PlaceWeather]>) in
                     switch response.result {
                     case .failure(let error):
-                        print(error)
+                        print(error.localizedDescription)
                     case .success(let object):
                         print("JSON: \(object)")
                     }
-                    print("Value: \(response.value)")
                     self?.loadData()
             })
         }

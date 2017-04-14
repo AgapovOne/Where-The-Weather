@@ -9,13 +9,15 @@
 import Alamofire
 
 enum Router: URLRequestConvertible {
-    case weather(forCity: City)
+    case
+    weather(forCity: City),
+    weathers(forCities: [City])
 
     static let baseURLString = "http://api.openweathermap.org"
 
     var method: HTTPMethod {
         switch self {
-        case .weather:
+        case .weather, .weathers:
             return .get
         }
     }
@@ -24,6 +26,8 @@ enum Router: URLRequestConvertible {
         switch self {
         case .weather:
             return "/data/2.5/weather"
+        case .weathers:
+            return "/data/2.5/group"
         }
     }
 
@@ -44,6 +48,9 @@ enum Router: URLRequestConvertible {
         switch self {
         case .weather(forCity: let city):
             urlRequest = try! URLEncoding.default.encode(urlRequest, with: ["q": city.name])
+        case .weathers(forCities: let cities):
+            let citiesArray = cities.map({ "\($0.id)" }).joined(separator: ",")
+            urlRequest = try! URLEncoding.default.encode(urlRequest, with: ["id": citiesArray])
         }
 
         return urlRequest
