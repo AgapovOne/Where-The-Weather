@@ -25,7 +25,7 @@ class DailyWeatherView: UIView {
             if let weather = weather {
                 dayLabel.text = DateFormatter.dayFormatter.string(from: weather.date)
                 descriptionLabel.text = "\(weather.weatherShort) (\(weather.weatherDescription))"
-                degreesLabel.text = "\(weather.temperature)°"
+                degreesLabel.text = NumberFormatter.degreeFormatter.string(from: NSNumber(floatLiteral: weather.temperature))! + "°"
             }
         }
     }

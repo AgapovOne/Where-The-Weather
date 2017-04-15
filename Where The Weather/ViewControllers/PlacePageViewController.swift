@@ -14,7 +14,7 @@ class PlacePageViewController: UIPageViewController {
     var places: [Place] = [] {
         didSet {
             let controllers: [PlaceContentViewController] = places.map {
-                let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: PlaceContentViewController.self)) as! PlaceContentViewController
+                let controller = StoryboardScene.Main.instantiatePlaceContentViewController()
                 controller.place = $0
                 return controller
             }
@@ -39,13 +39,14 @@ class PlacePageViewController: UIPageViewController {
         let pageControl = UIPageControl.appearance(whenContainedInInstancesOf: [PlacePageViewController.self])
         pageControl.pageIndicatorTintColor = UIColor.flatSand.withAlphaComponent(0.5)
         pageControl.currentPageIndicatorTintColor = UIColor.flatSandDark
+        pageControl.hidesForSinglePage = true
 
         setup()
         dataSource = self
     }
 
     private func setup() {
-        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: PlaceContentViewController.self)) as! PlaceContentViewController
+        let controller = StoryboardScene.Main.instantiatePlaceContentViewController()
 
         setViewControllers([controller], direction: .forward, animated: false, completion: nil)
     }

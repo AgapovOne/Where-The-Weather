@@ -81,7 +81,7 @@
         <!--Place Content View Controller-->
         <scene sceneID="db9-Dk-Xda">
             <objects>
-                <viewController storyboardIdentifier="PlaceContentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YNB-d2-O41" customClass="PlaceContentViewController" customModule="Where_The_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlaceContentViewController" id="YNB-d2-O41" customClass="PlaceContentViewController" customModule="Where_The_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jNU-oe-sy0"/>
                         <viewControllerLayoutGuide type="bottom" id="Kva-D5-lqK"/>

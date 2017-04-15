@@ -9,7 +9,7 @@
 import UIKit
 
 class PlaceContentViewController: UIViewController {
-    @IBOutlet weak var foreCastStackView: UIStackView!
+    @IBOutlet private var foreCastStackView: UIStackView!
 
     @IBOutlet private var degreesLabel: UILabel!
     @IBOutlet private var weatherDescriptionLabel: UILabel!
@@ -18,7 +18,7 @@ class PlaceContentViewController: UIViewController {
     var place: Place? {
         didSet {
             guard let place = place else { return }
-            degreesLabel?.text = "\(place.forecast.first!.temperature)°"
+            degreesLabel?.text = NumberFormatter.degreeFormatter.string(from: NSNumber(floatLiteral: place.forecast.first!.temperature))! + "°"
             weatherDescriptionLabel?.text = place.forecast.first!.weatherShort
             cityLabel?.text = place.name
             cityLabel?.isHidden = false
