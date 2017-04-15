@@ -1,5 +1,5 @@
 //
-//  Constants.swift
+//  Cities.swift
 //  Where The Weather
 //
 //  Created by Alex Agapov on 14/04/2017.
@@ -38,7 +38,20 @@ enum City: String {
         case .liverpool:
             return 7839747
         case .manchester:
-            return 3489586
+            return 5000598
+        }
+    }
+
+    var next: City {
+        switch self {
+        case .london:
+            return .cardiff
+        case .cardiff:
+            return .liverpool
+        case .liverpool:
+            return .manchester
+        case .manchester:
+            return .london
         }
     }
 

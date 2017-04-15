@@ -11,11 +11,11 @@ import ChameleonFramework
 
 class PlacePageViewController: UIPageViewController {
 
-    var weathers: [Weather] = [] {
+    var places: [Place] = [] {
         didSet {
-            let controllers: [PlaceContentViewController] = weathers.map {
+            let controllers: [PlaceContentViewController] = places.map {
                 let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: PlaceContentViewController.self)) as! PlaceContentViewController
-                controller.weather = $0
+                controller.place = $0
                 return controller
             }
             pages = controllers
@@ -55,7 +55,7 @@ class PlacePageViewController: UIPageViewController {
             return nil
         }
         let controller = pages[index] as? PlaceContentViewController
-        controller?.weather = weathers[index]
+        controller?.place = places[index]
         return controller
     }
 }

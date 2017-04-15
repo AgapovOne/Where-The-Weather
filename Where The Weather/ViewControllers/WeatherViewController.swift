@@ -23,15 +23,13 @@ class WeatherViewController: UIViewController {
             }
             viewModel.finishLoading = { [weak self] error in
                 guard
-                    let weathers = self?.viewModel.weathers,
+                    let places = self?.viewModel.places,
                     error == nil
                 else {
-                    // TODO: Error alert or whatever.
-                    // Can be empty or error.
                     UIAlertController.showSimpleAlert(title: "Error", message: error?.localizedDescription, from: self)
                     return
                 }
-                self?.fillPageViewController(weathers: weathers)
+                self?.fillPageViewController(places: places)
             }
         }
     }
@@ -40,21 +38,27 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.retrieveData()
+        viewModel.retrieveData(city: UserDefaults.searchedCity)
     }
 
-
     // MARK: - UI Actions
+    @IBAction func tapCity(_ sender: UIButton) {
+        let currentCity = UserDefaults.searchedCity
+        let nextCity = currentCity.next
+        UserDefaults.set(searchedCity: nextCity)
+        sender.setTitle(nextCity.name, for: .normal)
+    }
+
     @IBAction func tapRetrieve(_ sender: UIButton) {
-        viewModel.retrieveData()
+        viewModel.retrieveData(city: UserDefaults.searchedCity)
     }
 
     @IBAction func tapReload(_ sender: UIButton) {
-        viewModel.retrieveData(shouldLoad: true)
+        viewModel.retrieveData(city: UserDefaults.searchedCity, shouldLoad: true)
     }
 
     // MARK: - Private methods
-    private func fillPageViewController(weathers: [Weather]) {
-        pageViewController.weathers = weathers
+    private func fillPageViewController(places: [Place]) {
+        pageViewController.places = places
     }
 }

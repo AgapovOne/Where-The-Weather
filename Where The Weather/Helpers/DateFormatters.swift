@@ -11,7 +11,7 @@ import Foundation
 extension DateFormatter {
     class var dayFormatter: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateFormat = "mm dd"
+        formatter.dateFormat = "EEEE"
         return formatter
     }
 }
