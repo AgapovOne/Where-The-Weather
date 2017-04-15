@@ -1,7 +1,7 @@
 # Where-The-Weather
 
 ### Content:
-Features weather loading in hardcoded cities (London, Cardiff, Manchester, Liverpool
+Features weather loading for hardcoded cities (London, Cardiff, Manchester, Liverpool
 - From database (Realm)
 - From network (Alamofire)
 
@@ -9,6 +9,7 @@ Features weather loading in hardcoded cities (London, Cardiff, Manchester, Liver
 - [ ] Proper content creation for Page VC (currently, initial state is wrong, but it works if you turn pages).
 - [ ] Test RxSwift?
 - [ ] Add weather for a week (probably, with scroll view inside one page).
+- [ ] Choose city/cities that should be loaded.
 
 ### Dependencies:
 - Realm
