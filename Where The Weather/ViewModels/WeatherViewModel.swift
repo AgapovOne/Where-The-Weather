@@ -20,48 +20,46 @@ class WeatherViewModel {
 
     // MARK: - Public methods
     func retrieveData(shouldLoad: Bool = false) {
+        // TODO: Retrieve from Realm, load if needed
         startLoading()
         if shouldLoad {
             loadData()
         } else {
-            do {
-                let realm = try Realm()
-                weathers = Array(realm.objects(Weather.self))
-                finishLoading(nil)
-            } catch {
-                finishLoading(error)
+            DispatchQueue.main.async { [weak self] in
+                let realm = RealmManager.defaultRealm
+                self?.weathers = Array(realm.objects(Weather.self))
+                self?.finishLoading(nil)
             }
         }
     }
 
     // MARK: - Private methods
     private func loadData(completion: (() -> Void)? = nil) {
-        // TODO: Retrieve from Realm, load if needed
         Alamofire.request(Router.weathers(forCities: [.london, .manchester, .liverpool]))
             .validate()
-            .responseArray(keyPath: "list", completionHandler: { [weak self] (response: DataResponse<[Weather]>) in
-                switch response.result {
-                case .failure(let error):
-                    self?.finishLoading(error)
-                case .success(let objects):
-
-                    do {
-                        try self?.saveToRealm(objects)
-                    } catch {
+            .responseArray(keyPath: "list") { [weak self] (response: DataResponse<[Weather]>) in
+                DispatchQueue.main.async {
+                    switch response.result {
+                    case .failure(let error):
                         self?.finishLoading(error)
-                        return
+                    case .success(let objects):
+                        do {
+                            try self?.saveToRealm(objects)
+                        } catch {
+                            self?.finishLoading(error)
+                            return
+                        }
+                        self?.weathers = objects
+                        self?.finishLoading(nil)
                     }
-
-                    self?.weathers = objects
-                    self?.finishLoading(nil)
                 }
-            })
+            }
     }
 
     private func saveToRealm(_ objects:[Weather]) throws {
-        let realm = try Realm()
+        let realm = RealmManager.defaultRealm
         try realm.write {
-            realm.add(objects, update: true)
+            objects.forEach({ realm.add($0, update: true) })
         }
     }
 }

@@ -25,7 +25,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JiJ-SZ-W7X">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
-                                    <segue destination="BoR-2a-Hk0" kind="embed" id="jrv-cI-T1G"/>
+                                    <segue destination="BoR-2a-Hk0" kind="embed" id="Ciu-6r-OiO"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3d5-CU-gQL">
@@ -93,7 +93,7 @@
                                         <color key="textColor" red="0.79226005079999995" green="0.71810984609999995" blue="0.48854580520000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="5 May" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MX8-mT-O6r">
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MX8-mT-O6r">
                                         <rect key="frame" x="0.0" y="107.5" width="70.5" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                         <color key="textColor" red="0.79226005079999995" green="0.71810984609999995" blue="0.48854580520000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -109,14 +109,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dateLabel" destination="MX8-mT-O6r" id="e1p-9a-1oB"/>
                         <outlet property="degreesLabel" destination="0cR-rf-KnP" id="Rvk-ed-2fc"/>
                         <outlet property="weatherDescriptionLabel" destination="yFW-kj-CYB" id="im8-lz-6WC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWc-5V-yVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2081" y="123"/>
+            <point key="canvasLocation" x="2654" y="123"/>
         </scene>
         <!--Place Page View Controller-->
         <scene sceneID="GNs-T0-sjZ">
@@ -124,7 +123,7 @@
                 <pageViewController storyboardIdentifier="PlacePageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="BoR-2a-Hk0" customClass="PlacePageViewController" customModule="Where_The_Weather" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1C5-58-4uA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1474" y="-653"/>
+            <point key="canvasLocation" x="1889" y="123"/>
         </scene>
     </scenes>
 </document>

@@ -19,6 +19,7 @@
 		8D549A841EA15A0500564D65 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D549A831EA15A0500564D65 /* WeatherViewModel.swift */; };
 		8D549A861EA1687800564D65 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D549A851EA1687800564D65 /* UIKit+Extensions.swift */; };
 		8D549A8C1EA1707900564D65 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D549A8B1EA1707900564D65 /* DateFormatters.swift */; };
+		8D549A8F1EA1781B00564D65 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D549A8E1EA1781B00564D65 /* RealmManager.swift */; };
 		8DD297BA1E9FFC6200F54A45 /* PlacePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD297B91E9FFC6200F54A45 /* PlacePageViewController.swift */; };
 		8DD297BC1E9FFF7B00F54A45 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD297BB1E9FFF7B00F54A45 /* WeatherViewController.swift */; };
 		8DD297BE1EA0046000F54A45 /* PlaceContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD297BD1EA0046000F54A45 /* PlaceContentViewController.swift */; };
@@ -68,6 +69,7 @@
 		8D549A831EA15A0500564D65 /* WeatherViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		8D549A851EA1687800564D65 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		8D549A8B1EA1707900564D65 /* DateFormatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
+		8D549A8E1EA1781B00564D65 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		8DD297B91E9FFC6200F54A45 /* PlacePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePageViewController.swift; sourceTree = "<group>"; };
 		8DD297BB1E9FFF7B00F54A45 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		8DD297BD1EA0046000F54A45 /* PlaceContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceContentViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		8D15B8301E9FF47500FE5DD6 /* Where The Weather */ = {
 			isa = PBXGroup;
 			children = (
+				8D549A8D1EA177FA00564D65 /* Realm */,
 				8DD297B81E9FFBF300F54A45 /* API */,
 				8D15B8611E9FF85A00FE5DD6 /* Helpers */,
 				8D15B8601E9FF85400FE5DD6 /* Models */,
@@ -217,6 +220,14 @@
 				8D549A8B1EA1707900564D65 /* DateFormatters.swift */,
 			);
 			name = Formatters;
+			sourceTree = "<group>";
+		};
+		8D549A8D1EA177FA00564D65 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				8D549A8E1EA1781B00564D65 /* RealmManager.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		8DD297B81E9FFBF300F54A45 /* API */ = {
@@ -409,7 +420,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		71A6ED32C95B49488A7BCBC7 /* [CP] Embed Pods Frameworks */ = {
@@ -454,7 +465,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B228059AD72FB9AEF5A41343 /* [CP] Embed Pods Frameworks */ = {
@@ -499,7 +510,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E2ECA7DC17FB811490FD0FF7 /* [CP] Copy Pods Resources */ = {
@@ -529,6 +540,7 @@
 				8D549A841EA15A0500564D65 /* WeatherViewModel.swift in Sources */,
 				8DD297BA1E9FFC6200F54A45 /* PlacePageViewController.swift in Sources */,
 				8DD297C41EA0081400F54A45 /* Router.swift in Sources */,
+				8D549A8F1EA1781B00564D65 /* RealmManager.swift in Sources */,
 				8DD297BC1E9FFF7B00F54A45 /* WeatherViewController.swift in Sources */,
 				8D549A811EA14F4900564D65 /* UserDefaults.swift in Sources */,
 				8DD297C01EA0053000F54A45 /* Weather.swift in Sources */,

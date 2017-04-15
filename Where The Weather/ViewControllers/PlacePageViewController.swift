@@ -24,9 +24,11 @@ class PlacePageViewController: UIPageViewController {
 
     fileprivate var pages: [UIViewController] = [] {
         didSet {
-            guard let page = pages.first else { return }
-            (page as! PlaceContentViewController).weather = weathers.first
-            setViewControllers([page], direction: .forward, animated: true, completion: nil)
+            if let page = contentController(at: 0) {
+                setViewControllers([page], direction: .forward, animated: true, completion: nil)
+            } else {
+                setup()
+            }
         }
     }
     fileprivate var currentPage = 0
@@ -48,9 +50,12 @@ class PlacePageViewController: UIPageViewController {
         setViewControllers([controller], direction: .forward, animated: false, completion: nil)
     }
 
-    fileprivate func contentController(at index: Int) -> PlaceContentViewController {
-        let controller = pages[index] as! PlaceContentViewController
-        controller.weather = weathers[index]
+    fileprivate func contentController(at index: Int) -> PlaceContentViewController? {
+        guard !pages.isEmpty else {
+            return nil
+        }
+        let controller = pages[index] as? PlaceContentViewController
+        controller?.weather = weathers[index]
         return controller
     }
 }

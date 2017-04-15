@@ -55,12 +55,6 @@ class WeatherViewController: UIViewController {
 
     // MARK: - Private methods
     private func fillPageViewController(weathers: [Weather]) {
-        var controllers: [UIViewController] = []
-        weathers.forEach { _ in
-            let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: PlaceContentViewController.self)) as! PlaceContentViewController
-            controllers.append(controller)
-        }
-
         pageViewController.weathers = weathers
     }
 }
