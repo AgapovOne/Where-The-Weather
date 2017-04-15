@@ -8,7 +8,6 @@
 
 import RealmSwift
 import ObjectMapper
-import ObjectMapper_Realm
 
 class Place: Object, Mappable {
     dynamic var id: Int = 0
