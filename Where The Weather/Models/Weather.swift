@@ -26,6 +26,7 @@ class Weather: Object, Mappable {
     }
 
     func mapping(map: Map) {
+        id <- map["id"]
         temperature <- map["main.temp"]
         name <- map["name"]
         weatherDescription <- map["weather.0.description"]
