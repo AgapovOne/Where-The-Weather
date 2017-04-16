@@ -17,6 +17,8 @@
 		8D15B83C1E9FF47500FE5DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D15B83A1E9FF47500FE5DD6 /* LaunchScreen.storyboard */; };
 		8D15B8471E9FF47500FE5DD6 /* Where_The_WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D15B8461E9FF47500FE5DD6 /* Where_The_WeatherTests.swift */; };
 		8D15B8521E9FF47500FE5DD6 /* Where_The_WeatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D15B8511E9FF47500FE5DD6 /* Where_The_WeatherUITests.swift */; };
+		8D53F1301EA3B8E300BC6A34 /* PlaceWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D53F12E1EA3B8E300BC6A34 /* PlaceWeatherCollectionViewCell.swift */; };
+		8D53F1311EA3B8E300BC6A34 /* PlaceWeatherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D53F12F1EA3B8E300BC6A34 /* PlaceWeatherCollectionViewCell.xib */; };
 		8D549A811EA14F4900564D65 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D549A801EA14F4900564D65 /* UserDefaults.swift */; };
 		8D549A841EA15A0500564D65 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D549A831EA15A0500564D65 /* WeatherViewModel.swift */; };
 		8D549A861EA1687800564D65 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D549A851EA1687800564D65 /* UIKit+Extensions.swift */; };
@@ -71,6 +73,8 @@
 		8D15B84D1E9FF47500FE5DD6 /* Where The WeatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Where The WeatherUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D15B8511E9FF47500FE5DD6 /* Where_The_WeatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Where_The_WeatherUITests.swift; sourceTree = "<group>"; };
 		8D15B8531E9FF47500FE5DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D53F12E1EA3B8E300BC6A34 /* PlaceWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
+		8D53F12F1EA3B8E300BC6A34 /* PlaceWeatherCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceWeatherCollectionViewCell.xib; sourceTree = "<group>"; };
 		8D549A801EA14F4900564D65 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		8D549A831EA15A0500564D65 /* WeatherViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		8D549A851EA1687800564D65 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 			children = (
 				8D022A341EA2369100617A84 /* DailyWeatherView.swift */,
 				8D022A351EA2369100617A84 /* DailyWeatherView.xib */,
+				8D53F12E1EA3B8E300BC6A34 /* PlaceWeatherCollectionViewCell.swift */,
+				8D53F12F1EA3B8E300BC6A34 /* PlaceWeatherCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -393,6 +399,7 @@
 				8D022A371EA2369100617A84 /* DailyWeatherView.xib in Resources */,
 				8D15B83C1E9FF47500FE5DD6 /* LaunchScreen.storyboard in Resources */,
 				8D15B8391E9FF47500FE5DD6 /* Assets.xcassets in Resources */,
+				8D53F1311EA3B8E300BC6A34 /* PlaceWeatherCollectionViewCell.xib in Resources */,
 				8D15B8371E9FF47500FE5DD6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,6 +573,7 @@
 				8DD297BC1E9FFF7B00F54A45 /* WeatherViewController.swift in Sources */,
 				8D549A811EA14F4900564D65 /* UserDefaults.swift in Sources */,
 				8D022A361EA2369100617A84 /* DailyWeatherView.swift in Sources */,
+				8D53F1301EA3B8E300BC6A34 /* PlaceWeatherCollectionViewCell.swift in Sources */,
 				8DD297C01EA0053000F54A45 /* Place.swift in Sources */,
 				8D15B8321E9FF47500FE5DD6 /* AppDelegate.swift in Sources */,
 				8D549A861EA1687800564D65 /* UIKit+Extensions.swift in Sources */,

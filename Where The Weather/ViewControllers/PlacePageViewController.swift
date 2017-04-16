@@ -9,6 +9,7 @@
 import UIKit
 import ChameleonFramework
 
+// Unused
 class PlacePageViewController: UIPageViewController {
 
     var places: [Place] = [] {
