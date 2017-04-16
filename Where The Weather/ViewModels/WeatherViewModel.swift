@@ -19,10 +19,11 @@ class WeatherViewModel {
     var finishLoading: ((Error?) -> Void) = { _ in }
 
     // MARK: - Public methods
-    func retrieveData(city: City, shouldLoad: Bool = false) {
+    func retrieveData(city: City? = nil, shouldLoad: Bool = false) {
         // TODO: Retrieve from Realm, load if needed
         startLoading()
-        if shouldLoad {
+        if let city = city,
+            shouldLoad {
             loadData(city: city)
         } else {
             DispatchQueue.main.async { [weak self] in
@@ -49,8 +50,7 @@ class WeatherViewModel {
                             self?.finishLoading(error)
                             return
                         }
-                        self?.places = [object]
-                        self?.finishLoading(nil)
+                        self?.retrieveData()
                     }
                 }
             }

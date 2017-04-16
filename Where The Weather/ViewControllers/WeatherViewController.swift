@@ -14,6 +14,8 @@ class WeatherViewController: UIViewController {
     @IBOutlet fileprivate var collectionView: UICollectionView!
     @IBOutlet fileprivate var pageControl: UIPageControl!
 
+    @IBOutlet fileprivate var cityButton: UIButton!
+
     // MARK: - Properties
     var viewModel: WeatherViewModel! {
         didSet {
@@ -46,7 +48,10 @@ class WeatherViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
 
-        viewModel.retrieveData(city: UserDefaults.searchedCity)
+        let searchedCity = UserDefaults.searchedCity
+        cityButton.setTitle(searchedCity.name, for: .normal)
+
+        viewModel.retrieveData(city: searchedCity)
     }
 
     // MARK: - UI Actions
