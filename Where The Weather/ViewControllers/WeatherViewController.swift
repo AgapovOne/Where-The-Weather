@@ -11,9 +11,6 @@ import UIKit
 class WeatherViewController: UIViewController {
 
     // MARK: - UI outlets
-    /*var pageViewController: PlacePageViewController {
-        return childViewControllers.first as! PlacePageViewController
-    }*/
     @IBOutlet fileprivate var collectionView: UICollectionView!
     @IBOutlet fileprivate var pageControl: UIPageControl!
 
@@ -31,8 +28,7 @@ class WeatherViewController: UIViewController {
                     UIAlertController.showSimpleAlert(title: "Error", message: error?.localizedDescription, from: self)
                     return
                 }
-//                self?.fillPageViewController(places: places)
-                self?.collectionView.reloadSections(IndexSet(integer: 0))
+                self?.collectionView.reloadData()
                 self?.pageControl.numberOfPages = places.count
             }
         }
@@ -68,16 +64,11 @@ class WeatherViewController: UIViewController {
     @IBAction func tapReload(_ sender: UIButton) {
         viewModel.retrieveData(city: UserDefaults.searchedCity, shouldLoad: true)
     }
-
-    // MARK: - Private methods
-    /*private func fillPageViewController(places: [Place]) {
-        pageViewController.places = places
-    }*/
 }
 
 extension WeatherViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return collectionView.frame.size
+        return collectionView.bounds.size
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

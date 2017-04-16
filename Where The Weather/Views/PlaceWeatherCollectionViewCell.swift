@@ -27,11 +27,16 @@ class PlaceWeatherCollectionViewCell: UICollectionViewCell {
             cityLabel.text = place.name
             cityLabel.isHidden = false
 
+            forecastStackView.arrangedSubviews.forEach({ $0.removeFromSuperview() })
             place.forecast.forEach {
                 let view = DailyWeatherView.instantiate(weather: $0)
                 forecastStackView.addArrangedSubview(view)
             }
 
         }
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
 }

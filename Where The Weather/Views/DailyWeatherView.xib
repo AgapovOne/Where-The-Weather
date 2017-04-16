@@ -12,42 +12,36 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="eKd-ov-Aui" customClass="DailyWeatherView" customModule="Where_The_Weather" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="479" height="70"/>
+            <rect key="frame" x="0.0" y="0.0" width="479" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5Ed-Ac-QIM">
-                    <rect key="frame" x="16" y="18" width="82.5" height="34"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Y9-et-9MU">
-                            <rect key="frame" x="0.0" y="0.0" width="82.5" height="19.5"/>
-                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                            <color key="textColor" red="0.79226005079999995" green="0.71810984609999995" blue="0.48854580520000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day of week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B60-OL-NRt">
-                            <rect key="frame" x="0.0" y="19.5" width="82.5" height="14.5"/>
-                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
-                            <color key="textColor" red="0.79226005079999995" green="0.71810984609999995" blue="0.48854580520000002" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day of week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B60-OL-NRt">
+                    <rect key="frame" x="16" y="10.5" width="88" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                    <color key="textColor" red="0.79226005079999995" green="0.71810984609999995" blue="0.48854580520000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeZ-If-O8R">
-                    <rect key="frame" x="428" y="16" width="35" height="38"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="38" id="UXx-ia-aJV"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                    <rect key="frame" x="439.5" y="8" width="23.5" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
+                    <color key="textColor" red="0.79226005079999995" green="0.71810984609999995" blue="0.48854580520000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Y9-et-9MU">
+                    <rect key="frame" x="112" y="14.5" width="64.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                     <color key="textColor" red="0.79226005079999995" green="0.71810984609999995" blue="0.48854580520000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <constraints>
-                <constraint firstItem="JeZ-If-O8R" firstAttribute="top" secondItem="eKd-ov-Aui" secondAttribute="top" constant="16" id="1ex-xU-n88"/>
-                <constraint firstAttribute="bottom" secondItem="JeZ-If-O8R" secondAttribute="bottom" constant="16" id="8du-NJ-8pK"/>
-                <constraint firstItem="5Ed-Ac-QIM" firstAttribute="centerY" secondItem="eKd-ov-Aui" secondAttribute="centerY" id="Ibh-vl-dJH"/>
-                <constraint firstItem="5Ed-Ac-QIM" firstAttribute="leading" secondItem="eKd-ov-Aui" secondAttribute="leading" constant="16" id="JPp-6c-WB9"/>
+                <constraint firstItem="B60-OL-NRt" firstAttribute="centerY" secondItem="eKd-ov-Aui" secondAttribute="centerY" id="0LF-aB-98g"/>
+                <constraint firstItem="JeZ-If-O8R" firstAttribute="top" secondItem="eKd-ov-Aui" secondAttribute="top" constant="8" id="1ex-xU-n88"/>
+                <constraint firstItem="2Y9-et-9MU" firstAttribute="leading" secondItem="B60-OL-NRt" secondAttribute="trailing" constant="8" id="4qE-OG-kJL"/>
+                <constraint firstItem="2Y9-et-9MU" firstAttribute="baseline" secondItem="B60-OL-NRt" secondAttribute="baseline" id="jfY-dW-FH5"/>
+                <constraint firstItem="B60-OL-NRt" firstAttribute="leading" secondItem="eKd-ov-Aui" secondAttribute="leading" constant="16" id="msP-F7-LDp"/>
                 <constraint firstAttribute="trailing" secondItem="JeZ-If-O8R" secondAttribute="trailing" constant="16" id="sx4-nN-Aqw"/>
+                <constraint firstAttribute="bottom" secondItem="JeZ-If-O8R" secondAttribute="bottom" constant="8" id="yTk-hw-m8r"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
@@ -55,7 +49,7 @@
                 <outlet property="degreesLabel" destination="JeZ-If-O8R" id="mzD-qz-9pg"/>
                 <outlet property="descriptionLabel" destination="2Y9-et-9MU" id="wpS-jw-MZB"/>
             </connections>
-            <point key="canvasLocation" x="10.5" y="232"/>
+            <point key="canvasLocation" x="10.5" y="226.5"/>
         </view>
     </objects>
 </document>

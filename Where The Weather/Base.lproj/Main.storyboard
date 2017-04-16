@@ -12,7 +12,7 @@
         <!--Weather-->
         <scene sceneID="yAJ-Rm-Rc3">
             <objects>
-                <viewController storyboardIdentifier="WeatherViewController" title="Weather" id="Xso-su-Tn8" customClass="WeatherViewController" customModule="Where_The_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeatherViewController" title="Weather" automaticallyAdjustsScrollViewInsets="NO" id="Xso-su-Tn8" customClass="WeatherViewController" customModule="Where_The_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="413-WS-Dw9"/>
                         <viewControllerLayoutGuide type="bottom" id="IUE-G6-f01"/>
@@ -51,8 +51,8 @@
                                     <action selector="tapCity:" destination="Xso-su-Tn8" eventType="touchUpInside" id="haC-O3-7ud"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnI-dg-V7R">
-                                <rect key="frame" x="0.0" y="60" width="375" height="570"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnI-dg-V7R">
+                                <rect key="frame" x="0.0" y="84" width="375" height="546"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="yvc-4y-O4g">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -73,7 +73,7 @@
                             <constraint firstItem="3d5-CU-gQL" firstAttribute="baseline" secondItem="wlq-6w-NXU" secondAttribute="baseline" id="KLk-Fg-BQb"/>
                             <constraint firstItem="wlq-6w-NXU" firstAttribute="baseline" secondItem="MQE-qG-yit" secondAttribute="baseline" id="UMQ-go-7vJ"/>
                             <constraint firstAttribute="bottom" secondItem="I4H-dd-VQZ" secondAttribute="bottom" id="VES-qk-mlp"/>
-                            <constraint firstItem="dnI-dg-V7R" firstAttribute="top" secondItem="wlq-6w-NXU" secondAttribute="bottom" constant="8" id="dBb-Fn-y0h"/>
+                            <constraint firstItem="dnI-dg-V7R" firstAttribute="top" secondItem="wlq-6w-NXU" secondAttribute="bottom" constant="32" id="dBb-Fn-y0h"/>
                             <constraint firstItem="MQE-qG-yit" firstAttribute="leading" secondItem="MI9-4N-e3i" secondAttribute="leading" constant="16" id="edK-ZG-RNG"/>
                             <constraint firstItem="wlq-6w-NXU" firstAttribute="centerX" secondItem="MI9-4N-e3i" secondAttribute="centerX" id="ggx-pA-NKn"/>
                             <constraint firstItem="I4H-dd-VQZ" firstAttribute="top" secondItem="dnI-dg-V7R" secondAttribute="bottom" id="lYb-aq-bzT"/>
