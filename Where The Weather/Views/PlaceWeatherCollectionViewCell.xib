@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U31-2L-fJt">
-                                <rect key="frame" x="170.5" y="107.5" width="34" height="14.5"/>
+                                <rect key="frame" x="171" y="107.5" width="33.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                 <color key="textColor" red="0.79226005079999995" green="0.71810984609999995" blue="0.48854580520000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                             </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="wpG-ci-C0f" firstAttribute="top" secondItem="hzc-f9-9Pq" secondAttribute="top" id="0RX-x7-Cuf"/>
+                            <constraint firstItem="wpG-ci-C0f" firstAttribute="top" secondItem="hzc-f9-9Pq" secondAttribute="top" constant="8" id="0RX-x7-Cuf"/>
                             <constraint firstItem="wpG-ci-C0f" firstAttribute="leading" secondItem="hzc-f9-9Pq" secondAttribute="leading" id="3Ms-tS-m5e"/>
                             <constraint firstAttribute="bottom" secondItem="wpG-ci-C0f" secondAttribute="bottom" id="56h-fE-gsb"/>
                             <constraint firstItem="wpG-ci-C0f" firstAttribute="width" secondItem="hzc-f9-9Pq" secondAttribute="width" id="Gv1-ZE-aua"/>

@@ -15,10 +15,6 @@ class PlaceWeatherCollectionViewCell: UICollectionViewCell {
     @IBOutlet private var weatherDescriptionLabel: UILabel!
     @IBOutlet private var cityLabel: UILabel!
 
-    class var identifier: String {
-        return String(describing: PlaceWeatherCollectionViewCell.self)
-    }
-
     var place: Place? {
         didSet {
             guard let place = place else { return }

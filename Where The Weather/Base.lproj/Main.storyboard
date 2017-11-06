@@ -1,22 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xso-su-Tn8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2C6-3J-3g2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="FzX-jj-l7k">
+            <objects>
+                <viewController storyboardIdentifier="StartViewController" id="I4H-12-gpe" customClass="StartViewController" customModule="Where_The_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e3f-49-UsP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6l-gg-eA4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="301.5"/>
+                                <color key="backgroundColor" red="0.47660902142524719" green="0.37373736500740051" blue="0.28653344511985779" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="List">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapList:" destination="I4H-12-gpe" eventType="touchUpInside" id="VhZ-8X-N6B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nw6-gH-NCI">
+                                <rect key="frame" x="0.0" y="365.5" width="375" height="301.5"/>
+                                <color key="backgroundColor" red="0.2418571412563324" green="0.17698898911476135" blue="0.1230514720082283" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Page">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapPage:" destination="I4H-12-gpe" eventType="touchUpInside" id="hW9-hr-thu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nw6-gH-NCI" firstAttribute="top" secondItem="s6l-gg-eA4" secondAttribute="bottom" id="5Pa-YR-mvo"/>
+                            <constraint firstItem="s6l-gg-eA4" firstAttribute="leading" secondItem="x27-m2-plO" secondAttribute="leading" id="EJx-rU-BPK"/>
+                            <constraint firstItem="x27-m2-plO" firstAttribute="trailing" secondItem="s6l-gg-eA4" secondAttribute="trailing" id="I7Y-2y-Xlg"/>
+                            <constraint firstItem="s6l-gg-eA4" firstAttribute="top" secondItem="x27-m2-plO" secondAttribute="top" id="Ipx-zo-FSO"/>
+                            <constraint firstItem="x27-m2-plO" firstAttribute="bottom" secondItem="Nw6-gH-NCI" secondAttribute="bottom" id="Wnz-0a-S7R"/>
+                            <constraint firstItem="Nw6-gH-NCI" firstAttribute="leading" secondItem="x27-m2-plO" secondAttribute="leading" id="Y0x-Uc-wge"/>
+                            <constraint firstItem="x27-m2-plO" firstAttribute="trailing" secondItem="Nw6-gH-NCI" secondAttribute="trailing" id="hFy-8O-VH2"/>
+                            <constraint firstItem="s6l-gg-eA4" firstAttribute="height" secondItem="Nw6-gH-NCI" secondAttribute="height" id="vNr-w7-aYO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x27-m2-plO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EGz-F5-Zt9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Noy-yv-WWD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1520.8" y="122.78860569715144"/>
+        </scene>
+        <!--Cities List View Controller-->
+        <scene sceneID="xTV-Qy-WeE">
+            <objects>
+                <viewController storyboardIdentifier="CitiesListViewController" id="jOG-oC-Ilh" customClass="CitiesListViewController" customModule="Where_The_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EE6-5h-hZu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cPt-Kb-VyD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cPt-Kb-VyD" firstAttribute="top" secondItem="E8h-cX-IQe" secondAttribute="top" id="3ZG-xJ-OTh"/>
+                            <constraint firstItem="cPt-Kb-VyD" firstAttribute="leading" secondItem="E8h-cX-IQe" secondAttribute="leading" id="PBJ-It-j1T"/>
+                            <constraint firstItem="E8h-cX-IQe" firstAttribute="bottom" secondItem="cPt-Kb-VyD" secondAttribute="bottom" id="SDe-0R-R20"/>
+                            <constraint firstItem="E8h-cX-IQe" firstAttribute="trailing" secondItem="cPt-Kb-VyD" secondAttribute="trailing" id="aIb-X6-1Uo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E8h-cX-IQe"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="cPt-Kb-VyD" id="M2w-aL-AT2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lng-I6-qmx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2809" y="-4"/>
+        </scene>
         <!--Weather-->
         <scene sceneID="yAJ-Rm-Rc3">
             <objects>
                 <viewController storyboardIdentifier="WeatherViewController" title="Weather" automaticallyAdjustsScrollViewInsets="NO" id="Xso-su-Tn8" customClass="WeatherViewController" customModule="Where_The_Weather" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="413-WS-Dw9"/>
-                        <viewControllerLayoutGuide type="bottom" id="IUE-G6-f01"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MI9-4N-e3i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,20 +151,21 @@
                         <color key="backgroundColor" red="0.12637259070000001" green="0.12639245390000001" blue="0.1263653636" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="jrN-Qf-h5z" firstAttribute="centerX" secondItem="wlq-6w-NXU" secondAttribute="centerX" id="5RH-y0-chg"/>
-                            <constraint firstItem="dnI-dg-V7R" firstAttribute="leading" secondItem="MI9-4N-e3i" secondAttribute="leading" id="9OC-4H-BgD"/>
+                            <constraint firstItem="dnI-dg-V7R" firstAttribute="leading" secondItem="1IY-sX-m0H" secondAttribute="leading" id="9OC-4H-BgD"/>
                             <constraint firstItem="jrN-Qf-h5z" firstAttribute="top" secondItem="wlq-6w-NXU" secondAttribute="bottom" constant="-4" id="IBv-lf-sX6"/>
                             <constraint firstItem="3d5-CU-gQL" firstAttribute="baseline" secondItem="wlq-6w-NXU" secondAttribute="baseline" id="KLk-Fg-BQb"/>
                             <constraint firstItem="wlq-6w-NXU" firstAttribute="baseline" secondItem="MQE-qG-yit" secondAttribute="baseline" id="UMQ-go-7vJ"/>
                             <constraint firstAttribute="bottom" secondItem="I4H-dd-VQZ" secondAttribute="bottom" id="VES-qk-mlp"/>
                             <constraint firstItem="dnI-dg-V7R" firstAttribute="top" secondItem="wlq-6w-NXU" secondAttribute="bottom" constant="32" id="dBb-Fn-y0h"/>
-                            <constraint firstItem="MQE-qG-yit" firstAttribute="leading" secondItem="MI9-4N-e3i" secondAttribute="leading" constant="16" id="edK-ZG-RNG"/>
-                            <constraint firstItem="wlq-6w-NXU" firstAttribute="centerX" secondItem="MI9-4N-e3i" secondAttribute="centerX" id="ggx-pA-NKn"/>
+                            <constraint firstItem="MQE-qG-yit" firstAttribute="leading" secondItem="1IY-sX-m0H" secondAttribute="leading" constant="16" id="edK-ZG-RNG"/>
+                            <constraint firstItem="wlq-6w-NXU" firstAttribute="centerX" secondItem="1IY-sX-m0H" secondAttribute="centerX" id="ggx-pA-NKn"/>
                             <constraint firstItem="I4H-dd-VQZ" firstAttribute="top" secondItem="dnI-dg-V7R" secondAttribute="bottom" id="lYb-aq-bzT"/>
-                            <constraint firstItem="I4H-dd-VQZ" firstAttribute="centerX" secondItem="MI9-4N-e3i" secondAttribute="centerX" id="xz0-LH-Eoe"/>
-                            <constraint firstItem="MQE-qG-yit" firstAttribute="top" secondItem="413-WS-Dw9" secondAttribute="bottom" id="yci-qv-Ix4"/>
-                            <constraint firstAttribute="trailing" secondItem="3d5-CU-gQL" secondAttribute="trailing" constant="16" id="zPi-hC-8hb"/>
-                            <constraint firstAttribute="trailing" secondItem="dnI-dg-V7R" secondAttribute="trailing" id="zVI-r4-rxL"/>
+                            <constraint firstItem="I4H-dd-VQZ" firstAttribute="centerX" secondItem="1IY-sX-m0H" secondAttribute="centerX" id="xz0-LH-Eoe"/>
+                            <constraint firstItem="MQE-qG-yit" firstAttribute="top" secondItem="1IY-sX-m0H" secondAttribute="top" id="yci-qv-Ix4"/>
+                            <constraint firstItem="1IY-sX-m0H" firstAttribute="trailing" secondItem="3d5-CU-gQL" secondAttribute="trailing" constant="16" id="zPi-hC-8hb"/>
+                            <constraint firstItem="1IY-sX-m0H" firstAttribute="trailing" secondItem="dnI-dg-V7R" secondAttribute="trailing" id="zVI-r4-rxL"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="1IY-sX-m0H"/>
                     </view>
                     <navigationItem key="navigationItem" id="cG5-Wy-8OF"/>
                     <connections>
@@ -100,7 +176,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cz-W1-IhP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1980" y="122.78860569715144"/>
+            <point key="canvasLocation" x="2810" y="672"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kji-Fy-fgE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2C6-3J-3g2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="swM-71-3tl">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.12637259066104889" green="0.12639245390892029" blue="0.12636536359786987" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I4H-12-gpe" kind="relationship" relationship="rootViewController" id="s2T-ku-SYr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bvx-Gn-tBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="123"/>
         </scene>
     </scenes>
 </document>

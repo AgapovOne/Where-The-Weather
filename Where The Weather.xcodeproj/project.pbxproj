@@ -11,6 +11,11 @@
 		18FC0C124CCB1A94A61950D7 /* Pods_Where_The_WeatherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73CEE395EC93B8F43DB63051 /* Pods_Where_The_WeatherUITests.framework */; };
 		8D022A361EA2369100617A84 /* DailyWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D022A341EA2369100617A84 /* DailyWeatherView.swift */; };
 		8D022A371EA2369100617A84 /* DailyWeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D022A351EA2369100617A84 /* DailyWeatherView.xib */; };
+		8D0F50181FB072BE00BFAE4C /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0F50171FB072BE00BFAE4C /* StartViewController.swift */; };
+		8D0F501A1FB07C0200BFAE4C /* CitiesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0F50191FB07C0200BFAE4C /* CitiesListViewController.swift */; };
+		8D0F501C1FB07DE800BFAE4C /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0F501B1FB07DE800BFAE4C /* CityModel.swift */; };
+		8D0F501F1FB07EC400BFAE4C /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0F501D1FB07EC400BFAE4C /* CityCell.swift */; };
+		8D0F50201FB07EC400BFAE4C /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D0F501E1FB07EC400BFAE4C /* CityCell.xib */; };
 		8D15B8321E9FF47500FE5DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D15B8311E9FF47500FE5DD6 /* AppDelegate.swift */; };
 		8D15B8371E9FF47500FE5DD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D15B8351E9FF47500FE5DD6 /* Main.storyboard */; };
 		8D15B8391E9FF47500FE5DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D15B8381E9FF47500FE5DD6 /* Assets.xcassets */; };
@@ -24,7 +29,6 @@
 		8D549A861EA1687800564D65 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D549A851EA1687800564D65 /* UIKit+Extensions.swift */; };
 		8D549A8C1EA1707900564D65 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D549A8B1EA1707900564D65 /* DateFormatters.swift */; };
 		8D549A8F1EA1781B00564D65 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D549A8E1EA1781B00564D65 /* RealmManager.swift */; };
-		8DD297BA1E9FFC6200F54A45 /* PlacePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD297B91E9FFC6200F54A45 /* PlacePageViewController.swift */; };
 		8DD297BC1E9FFF7B00F54A45 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD297BB1E9FFF7B00F54A45 /* WeatherViewController.swift */; };
 		8DD297BE1EA0046000F54A45 /* PlaceContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD297BD1EA0046000F54A45 /* PlaceContentViewController.swift */; };
 		8DD297C01EA0053000F54A45 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD297BF1EA0053000F54A45 /* Place.swift */; };
@@ -61,6 +65,11 @@
 		73CEE395EC93B8F43DB63051 /* Pods_Where_The_WeatherUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Where_The_WeatherUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D022A341EA2369100617A84 /* DailyWeatherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyWeatherView.swift; sourceTree = "<group>"; };
 		8D022A351EA2369100617A84 /* DailyWeatherView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyWeatherView.xib; sourceTree = "<group>"; };
+		8D0F50171FB072BE00BFAE4C /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		8D0F50191FB07C0200BFAE4C /* CitiesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListViewController.swift; sourceTree = "<group>"; };
+		8D0F501B1FB07DE800BFAE4C /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		8D0F501D1FB07EC400BFAE4C /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
+		8D0F501E1FB07EC400BFAE4C /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
 		8D15B82E1E9FF47500FE5DD6 /* Where The Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where The Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D15B8311E9FF47500FE5DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D15B8361E9FF47500FE5DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,7 +89,6 @@
 		8D549A851EA1687800564D65 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		8D549A8B1EA1707900564D65 /* DateFormatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		8D549A8E1EA1781B00564D65 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		8DD297B91E9FFC6200F54A45 /* PlacePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacePageViewController.swift; sourceTree = "<group>"; };
 		8DD297BB1E9FFF7B00F54A45 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		8DD297BD1EA0046000F54A45 /* PlaceContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceContentViewController.swift; sourceTree = "<group>"; };
 		8DD297BF1EA0053000F54A45 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -138,6 +146,8 @@
 				8D022A351EA2369100617A84 /* DailyWeatherView.xib */,
 				8D53F12E1EA3B8E300BC6A34 /* PlaceWeatherCollectionViewCell.swift */,
 				8D53F12F1EA3B8E300BC6A34 /* PlaceWeatherCollectionViewCell.xib */,
+				8D0F501D1FB07EC400BFAE4C /* CityCell.swift */,
+				8D0F501E1FB07EC400BFAE4C /* CityCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,9 +214,10 @@
 		8D15B85F1E9FF84E00FE5DD6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8D0F50171FB072BE00BFAE4C /* StartViewController.swift */,
 				8DD297BB1E9FFF7B00F54A45 /* WeatherViewController.swift */,
-				8DD297B91E9FFC6200F54A45 /* PlacePageViewController.swift */,
 				8DD297BD1EA0046000F54A45 /* PlaceContentViewController.swift */,
+				8D0F50191FB07C0200BFAE4C /* CitiesListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -216,6 +227,7 @@
 			children = (
 				8DD297C11EA007E700F54A45 /* Cities.swift */,
 				8DD297BF1EA0053000F54A45 /* Place.swift */,
+				8D0F501B1FB07DE800BFAE4C /* CityModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -349,12 +361,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Alex Agapov";
 				TargetAttributes = {
 					8D15B82D1E9FF47500FE5DD6 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = X76MKT7DV3;
 						ProvisioningStyle = Automatic;
 					};
 					8D15B8411E9FF47500FE5DD6 = {
@@ -396,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D0F50201FB07EC400BFAE4C /* CityCell.xib in Resources */,
 				8D022A371EA2369100617A84 /* DailyWeatherView.xib in Resources */,
 				8D15B83C1E9FF47500FE5DD6 /* LaunchScreen.storyboard in Resources */,
 				8D15B8391E9FF47500FE5DD6 /* Assets.xcassets in Resources */,
@@ -442,13 +454,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Where The WeatherTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		71A6ED32C95B49488A7BCBC7 /* [CP] Embed Pods Frameworks */ = {
@@ -457,9 +472,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Where The Weather/Pods-Where The Weather-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -487,13 +515,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Where The Weather-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B228059AD72FB9AEF5A41343 /* [CP] Embed Pods Frameworks */ = {
@@ -532,13 +563,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Where The WeatherUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E2ECA7DC17FB811490FD0FF7 /* [CP] Copy Pods Resources */ = {
@@ -563,16 +597,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D0F501F1FB07EC400BFAE4C /* CityCell.swift in Sources */,
 				8D549A8C1EA1707900564D65 /* DateFormatters.swift in Sources */,
 				8DD297BE1EA0046000F54A45 /* PlaceContentViewController.swift in Sources */,
 				8D549A841EA15A0500564D65 /* WeatherViewModel.swift in Sources */,
-				8DD297BA1E9FFC6200F54A45 /* PlacePageViewController.swift in Sources */,
 				8DD297C41EA0081400F54A45 /* WeatherRouter.swift in Sources */,
 				8D549A8F1EA1781B00564D65 /* RealmManager.swift in Sources */,
 				8DF64AFA1EA2591E00738155 /* Storyboards.swift in Sources */,
 				8DD297BC1E9FFF7B00F54A45 /* WeatherViewController.swift in Sources */,
+				8D0F501A1FB07C0200BFAE4C /* CitiesListViewController.swift in Sources */,
+				8D0F501C1FB07DE800BFAE4C /* CityModel.swift in Sources */,
 				8D549A811EA14F4900564D65 /* UserDefaults.swift in Sources */,
 				8D022A361EA2369100617A84 /* DailyWeatherView.swift in Sources */,
+				8D0F50181FB072BE00BFAE4C /* StartViewController.swift in Sources */,
 				8D53F1301EA3B8E300BC6A34 /* PlaceWeatherCollectionViewCell.swift in Sources */,
 				8DD297C01EA0053000F54A45 /* Place.swift in Sources */,
 				8D15B8321E9FF47500FE5DD6 /* AppDelegate.swift in Sources */,
@@ -645,7 +682,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -653,7 +692,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -695,7 +738,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -703,7 +748,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -733,13 +782,13 @@
 			baseConfigurationReference = 1E106655BCAA4B001E933ABB /* Pods-Where The Weather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X76MKT7DV3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Where The Weather/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "one.agapov.Where-The-Weather";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -748,13 +797,13 @@
 			baseConfigurationReference = 62F091927E0DCFC8693BC017 /* Pods-Where The Weather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X76MKT7DV3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Where The Weather/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "one.agapov.Where-The-Weather";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

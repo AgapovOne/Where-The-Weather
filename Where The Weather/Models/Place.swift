@@ -10,8 +10,8 @@ import RealmSwift
 import ObjectMapper
 
 class Place: Object, Mappable {
-    dynamic var id: Int = 0
-    dynamic var name: String = ""
+    @objc dynamic var id: Int = 0
+    @objc dynamic var name: String = ""
     let forecast = List<DailyWeather>()
 
     override static func primaryKey() -> String? {
@@ -30,12 +30,12 @@ class Place: Object, Mappable {
 }
 
 class DailyWeather: Object, Mappable {
-    dynamic var temperature: Double = 0.0
-    dynamic var minTemperature: Double = 0.0
-    dynamic var maxTemperature: Double = 0.0
-    dynamic var weatherShort: String = ""
-    dynamic var weatherDescription: String = ""
-    dynamic var date: Date = Date()
+    @objc dynamic var temperature: Double = 0.0
+    @objc dynamic var minTemperature: Double = 0.0
+    @objc dynamic var maxTemperature: Double = 0.0
+    @objc dynamic var weatherShort: String = ""
+    @objc dynamic var weatherDescription: String = ""
+    @objc dynamic var date: Date = Date()
 
     required convenience init?(map: Map) {
         self.init()

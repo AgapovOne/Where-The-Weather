@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,13 +15,13 @@
             <rect key="frame" x="0.0" y="0.0" width="479" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day of week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B60-OL-NRt">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="Day of week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B60-OL-NRt">
                     <rect key="frame" x="16" y="10.5" width="88" height="19.5"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                     <color key="textColor" red="0.79226005079999995" green="0.71810984609999995" blue="0.48854580520000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeZ-If-O8R">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeZ-If-O8R">
                     <rect key="frame" x="439.5" y="8" width="23.5" height="24"/>
                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                     <color key="textColor" red="0.79226005079999995" green="0.71810984609999995" blue="0.48854580520000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,6 +38,7 @@
                 <constraint firstItem="B60-OL-NRt" firstAttribute="centerY" secondItem="eKd-ov-Aui" secondAttribute="centerY" id="0LF-aB-98g"/>
                 <constraint firstItem="JeZ-If-O8R" firstAttribute="top" secondItem="eKd-ov-Aui" secondAttribute="top" constant="8" id="1ex-xU-n88"/>
                 <constraint firstItem="2Y9-et-9MU" firstAttribute="leading" secondItem="B60-OL-NRt" secondAttribute="trailing" constant="8" id="4qE-OG-kJL"/>
+                <constraint firstItem="JeZ-If-O8R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2Y9-et-9MU" secondAttribute="trailing" constant="8" id="eOJ-no-Ish"/>
                 <constraint firstItem="2Y9-et-9MU" firstAttribute="baseline" secondItem="B60-OL-NRt" secondAttribute="baseline" id="jfY-dW-FH5"/>
                 <constraint firstItem="B60-OL-NRt" firstAttribute="leading" secondItem="eKd-ov-Aui" secondAttribute="leading" constant="16" id="msP-F7-LDp"/>
                 <constraint firstAttribute="trailing" secondItem="JeZ-If-O8R" secondAttribute="trailing" constant="16" id="sx4-nN-Aqw"/>

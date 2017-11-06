@@ -15,3 +15,15 @@ extension UIAlertController {
         viewController?.present(alert, animated: true, completion: nil)
     }
 }
+
+extension UITableViewCell {
+    class var identifier: String {
+        return String(describing: self)
+    }
+}
+
+extension UICollectionViewCell {
+    class var identifier: String {
+        return String(describing: self)
+    }
+}
